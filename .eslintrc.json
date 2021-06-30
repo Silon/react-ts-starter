@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react-hooks"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["."]
+      }
+    }
+  },
+  "overrides": [
+    {
+      // Turn off "react/prop-types" rule for TypeScript files
+      "files": ["**/*.tsx", "**/*.ts"],
+      "rules": {
+        "react/prop-types": "off",
+        "react/display-name": "off"
+      }
+    }
+  ],
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": 0,
+    "react/button-has-type": 1,
+    "no-restricted-imports": [
+      "error",
+      {
+        "name": "react-redux",
+        "importNames": ["useDispatch"],
+        "message": "Please import { useAppDispatch } from 'src/redux/store' instead."
+      },
+      {
+        "name": "local-storage",
+        "message": "Please import { ls } from 'src/utils/localStorage' instead."
+      }
+    ]
+  }
+}

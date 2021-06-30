@@ -1,0 +1,15 @@
+@import 'src/assets/styles/utils/index.module.scss';
+
+.worldMap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.formLogin {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}

@@ -1,0 +1,86 @@
+{
+  "name": "no-react-ts",
+  "version": "1.0.0",
+  "author": {
+    "name": "Damian Nowakowski"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "start": "yarn icons && react-scripts start",
+    "dev": "yarn start",
+    "build": "react-scripts build",
+    "serve": "serve -s build -l 4000",
+    "icons": "node ./scripts/generate-icon-system",
+    "icons-preview": "./docs/icons-list.html",
+    "generate": "plop",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
+    "@rooks/use-key": "^4.6.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.15",
+    "@types/lodash": "^4.14.167",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "@types/react-redux": "^7.1.15",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/redux-logger": "^3.0.8",
+    "babel-loader": "8.1.0",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.8.0",
+    "history": "^5.0.0",
+    "local-storage": "^2.0.0",
+    "lodash": "^4.17.20",
+    "mkdirp": "^1.0.4",
+    "node-sass": "^4.0.0",
+    "plop": "^2.7.4",
+    "react": "^17.0.1",
+    "react-datepicker": "^3.4.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "svg-sprite": "^1.5.0",
+    "typescript": "^4.3.4"
+  },
+  "devDependencies": {
+    "@babel/helper-builder-react-jsx-experimental": "^7.12.11",
+    "@types/classnames": "^2.2.11",
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.2.1",
+    "redux-devtools-extension": "^2.13.8",
+    "stylelint": "^13.8.0",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-hudochenkov": "^5.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

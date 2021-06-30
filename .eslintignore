@@ -1,0 +1,11 @@
+**/coverage/**
+node_modules
+dist
+build
+lib
+scripts
+cypress
+docs
+**/__testfixtures__/**
+**/__tests__/fixtures/**
+**/*.d.ts

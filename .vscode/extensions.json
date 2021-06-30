@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "amatiasq.sort-imports",
+    "mrmlnc.vscode-scss",
+    "clinyong.vscode-css-modules"
+  ]
+}

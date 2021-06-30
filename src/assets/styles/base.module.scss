@@ -1,0 +1,55 @@
+@import 'vars.module';
+
+html {
+  font-size: 62.5%;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-weight: $fw-regular;
+  font-size: 1.2rem;
+  font-family: $ff-sans;
+  line-height: 1.4rem;
+}
+
+canvas {
+  user-select: none;
+  user-select: none;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+input,
+button,
+select {
+  appearance: none;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+input[type='number'] {
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+button * {
+  pointer-events: none;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
