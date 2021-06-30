@@ -1,6 +1,6 @@
-<h1 align="center">React SPA with Typescript Starter</h1>
+<h1 align="center">React SPA Starter with Typescript</h1>
 <p align="center">
-Project made with ❤️ and based experience.
+Project made with ❤️ and based on experience.
 </p>
 
 ## 🛒 Tech Stack
