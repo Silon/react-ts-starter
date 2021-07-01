@@ -15,8 +15,9 @@
     "serve": "serve -s build -l 4000",
     "icons": "node ./scripts/generate-icon-system",
     "icons-preview": "./docs/icons-list.html",
-    "generate": "plop",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "new-component": "plop component",
+    "new-reducer": "plop reducer"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",

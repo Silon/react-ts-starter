@@ -1,0 +1,25 @@
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+
+export type T{{pascalCase name}}State = {
+  example: boolean;
+};
+
+export const initial{{pascalCase name}}State: T{{pascalCase name}}State = {
+  example: false,
+};
+
+const {{camelCase name}}Slice = createSlice({
+  name: '{{camelCase name}}',
+  initialState: initial{{pascalCase name}}State,
+  reducers: {
+    setExample(state, action: PayloadAction<T{{pascalCase name}}State['example']>) {
+      state.example = action.payload;
+    },
+  },
+});
+
+// Actions
+export const { setExample } = {{camelCase name}}Slice.actions;
+
+// Reducer
+export const {{camelCase name}}Reducer = {{camelCase name}}Slice.reducer;
