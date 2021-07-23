@@ -1,4 +1,5 @@
 import { AnyAction, Reducer, combineReducers } from 'redux';
+import { TModalsState, modalsReducer } from 'src/redux/modals/modals.slice';
 import { TAuthState, authReducer } from 'src/redux/auth/auth.slice';
 
 import { BrowserHistory } from 'history';
@@ -13,6 +14,7 @@ function withPersist<T>(key: string, reducer: Reducer<T, AnyAction>, config = {}
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const createRootReducer = (history: BrowserHistory) =>
   combineReducers({
+    modals: withPersist<TModalsState>('modals', modalsReducer),
     auth: withPersist<TAuthState>('auth', authReducer),
     router: connectRouter(history),
   });

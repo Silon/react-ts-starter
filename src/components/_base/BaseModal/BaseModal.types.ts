@@ -6,6 +6,10 @@ export type TBaseModalProps = {
    */
   open: boolean;
   /**
+   *  Global modal id stored in redux
+   */
+  id?: string;
+  /**
    *  If placement is related type, modal will be sticked to this element
    */
   anchorEl?: HTMLElement;

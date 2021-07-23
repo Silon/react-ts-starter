@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
+import { closeModal, openModal } from 'src/redux/modals/modals.slice';
 
 import ReactDOM from 'react-dom';
 import { TBaseModalProps } from './BaseModal.types';
 import classNames from 'classnames';
 import s from './BaseModal.module.scss';
+import { useAppDispatch } from 'src/redux/store';
 import { useCallback } from 'react';
 import { useEffect } from 'react';
 import useOutsideClick from 'src/hooks/useOutsideClick';
@@ -12,6 +14,7 @@ export const BaseModal: React.FC<TBaseModalProps> = ({
   className,
   children,
   style = {},
+  id,
   anchorEl,
   disablePortal,
   placement,
@@ -20,6 +23,7 @@ export const BaseModal: React.FC<TBaseModalProps> = ({
   keepMounted = false,
   onOutsideClick,
 }) => {
+  const dispatch = useAppDispatch();
   const portalElement = document.getElementById('app-root');
   const { transform: styleTransform, ...styleRest } = style;
   const modalRef = useRef<HTMLDivElement | null>(null);
@@ -107,6 +111,16 @@ export const BaseModal: React.FC<TBaseModalProps> = ({
     };
   }, [recalculatePosition]);
 
+  useEffect(() => {
+    if (typeof open !== 'boolean' && id) {
+      if (open) {
+        dispatch(openModal(id));
+      } else {
+        dispatch(closeModal(id));
+      }
+    }
+  });
+
   if (keepMounted && !open) {
     styleRest.visibility = 'hidden';
   } else {
@@ -117,6 +131,7 @@ export const BaseModal: React.FC<TBaseModalProps> = ({
     <div
       ref={modalRefCallback}
       className={classNames(s.container, className)}
+      id={id && `modal_${id}`}
       style={{
         transform: `translate(${position.left}px, ${position.top}px)${
           styleTransform ? styleTransform : ''
