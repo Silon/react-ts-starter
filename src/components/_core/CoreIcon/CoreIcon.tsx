@@ -12,7 +12,10 @@ export const CoreIcon: React.FC<TCoreIconProps> = ({
   onClick,
 }) => {
   const IconComponent = ICONS[name];
-  console.log({ IconComponent });
+
+  if (!IconComponent) {
+    throw new Error(`IconComponent (${name}) not found`);
+  }
 
   return (
     <IconComponent
