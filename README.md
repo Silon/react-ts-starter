@@ -8,7 +8,7 @@ Project made with ❤️ and based on experience.
 - React
 - Typescript
 - Redux-Toolkit
-- CSS Modules
+- SCSS Modules
 
 ## 🚀 Quick Start
 
