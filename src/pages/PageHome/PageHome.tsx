@@ -8,7 +8,7 @@ export const PageHome: React.FC<TPageHomeProps> = () => {
     <div className={s.container}>
       Home
       <br />
-      <CoreIcon name="icon-arrow" size={20} />
+      <CoreIcon name="icon-arrow" size={40} />
     </div>
   );
 };

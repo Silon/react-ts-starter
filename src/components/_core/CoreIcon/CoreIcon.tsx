@@ -20,7 +20,7 @@ export const CoreIcon: React.FC<TCoreIconProps> = ({
   return (
     <IconComponent
       className={clsx(s.icon, className)}
-      style={{ ...style, width: size, height: size }}
+      style={{ ...style, maxWidth: size, maxHeight: size }}
       onClick={onClick}
     />
   );
