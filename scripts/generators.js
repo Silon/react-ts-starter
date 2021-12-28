@@ -1,7 +1,7 @@
 const { toPascalCase } = require('./utils');
 const { writeFileSync, readFile, readFileSync } = require('fs');
 
-const generateWebIconMap = (icons, { dir }) => {
+const generateWebIconMap = (icons, { dir, source }) => {
   const iconMapContent = [
     '/*',
     '!!!!!!!!!!!!!!',
@@ -9,7 +9,7 @@ const generateWebIconMap = (icons, { dir }) => {
     '*/',
     '',
     icons
-      .map((icon) => `import { ReactComponent as ${toPascalCase(icon)} } from './${icon}.svg';`)
+      .map((icon) => `import { ReactComponent as ${toPascalCase(icon)} } from '${source}/${icon}.svg';`)
       .join('\n'),
     'export const ICONS = {',
     icons.map((icon) => `"${icon}": ${toPascalCase(icon)}, `).join('\n'),

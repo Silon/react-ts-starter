@@ -1,12 +1,12 @@
-import 'styles/reset.css';
-import 'styles/base.css';
+import 'src/styles/reset.css';
+import 'src/styles/base.css';
 
 import { Route, Routes } from 'react-router';
 
 import { BrowserRouter } from 'react-router-dom';
-import { PageHome } from 'pages/PageHome';
-import { PublicRoute } from 'routes/PublicRoute';
-import { routes } from 'config/routes';
+import { PageHome } from 'src/pages/PageHome';
+import { PublicRoute } from 'src/routes/PublicRoute';
+import { routes } from 'src/config/routes';
 
 function App() {
   return (
